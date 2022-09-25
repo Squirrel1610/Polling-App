@@ -20,6 +20,10 @@ app.use(cors());
 const pollRoute = require("./routes/poll");
 app.use("/poll", pollRoute);
 
+app.get("/hello", (req, res) => {
+    res.send("Hello");
+})
+
 const port = process.env.PORT;
 
 app.listen(port, () => {
